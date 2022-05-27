@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      let imgs = ["../assets/baiji.jpg", "../assets/sea-cow.jpg", "../assets/golden-toad.jpg"];
+      let counter = 0;
+      let titles = ["Baiji", "Stellar's Sea Cow", "Golden Toad"]
+      let myFunction = () => {
+        document.getElementById("gallery").src = imgs[counter];
+        document.getElementById("title").innerText = titles[counter];
+      }
+
+      let next = () => {
+        if (counter < 2) {
+          counter += 1;
+        } else {
+          counter = 0;
+        }
+        document.getElementById("gallery").src = imgs[counter];
+        document.getElementById("title").innerText = titles[counter];
+      }
+    </script>
+    <link rel="stylesheet" href="../style/style.css">
+  </head>
+  <body onload="myFunction()">  
+
+    <a href="../index.html">Home </a>
+    <br>
+    <h3 id="title"></h3>
+    <br>
+    <img id="gallery" src="">
+    <br>
+    <button onclick="next()">NEXT</button>
+    
+    
+    <!-- <ol>
+    
+    
+      <li>
+        
+        <p>The baiji is a type of dolphin that lives in a river in China.  Maybe it's extinct, maybe not, but right now scientists can't find any.</p>
+        <img src="../assets/baiji.jpg" alt="Baiji" >
+        <p>from Alessio Marrucci on commons.wikimedia.org - CC BY-SA 3.0</p>
+      </li>
+
+    
+      <li>
+        <h3>Steller's Sea Cow</h3>
+        <p>Its skin is an inch thick, and instead of teeth, it has white bristles.  Imagine eating with your mustache.</p>
+        <img src="../assets/sea-cow.jpg" alt="Steller's Sea Cow" >
+        <p>Emoke Denes on commons.wikimedia.org - CC BY-SA 2.5 </p></li>
+
+      
+      <li>
+        <h3>Golden Toad</h3>
+        <p>A toad made of gold.  Enough said.</p>
+        <img src="../assets/golden-toad.jpg" alt="Golden Toad" >
+        <p>Charles H. Smith on commons.wikimedia.org - Public Domain</p>
+      </li>
+    </ol> -->
+	</body>
+</html> 
