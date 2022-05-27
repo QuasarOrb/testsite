@@ -12,12 +12,13 @@ text-align: center;
 
 img {
   float: center;
-  width: 600px;
+  
   margin: 30px;
   border-color: #2d8feb;
   border-width: 15px;
   border-style: solid;
   border-radius: 10px;
+  height: 250px;
 
 }
 

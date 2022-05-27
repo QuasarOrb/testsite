@@ -3,21 +3,37 @@
   <head>
     <script>
       let imgs = ["../assets/baiji.jpg", "../assets/sea-cow.jpg", "../assets/golden-toad.jpg"];
+      let descs = ["The baiji is a type of dolphin that lives in a river in China.  Maybe it's extinct, maybe not, but right now scientists can't find any.", 
+      "Its skin is an inch thick, and instead of teeth, it has white bristles.  Imagine eating with your mustache.", "A toad made of gold.  Enough said."
+    ]
       let counter = 0;
       let titles = ["Baiji", "Stellar's Sea Cow", "Golden Toad"]
       let myFunction = () => {
         document.getElementById("gallery").src = imgs[counter];
         document.getElementById("title").innerText = titles[counter];
+        document.getElementById("desc").innerText = descs[counter];
+
       }
 
       let next = () => {
-        if (counter < 2) {
+        if (counter < imgs.length - 1) {
           counter += 1;
         } else {
           counter = 0;
         }
         document.getElementById("gallery").src = imgs[counter];
         document.getElementById("title").innerText = titles[counter];
+        document.getElementById("desc").innerText = descs[counter];
+      }
+      let prev = () => {
+        if (counter > 0) {
+          counter -= 1;
+        } else {
+          counter = imgs.length - 1;
+        }
+        document.getElementById("gallery").src = imgs[counter];
+        document.getElementById("title").innerText = titles[counter];
+        document.getElementById("desc").innerText = descs[counter];
       }
     </script>
     <link rel="stylesheet" href="../style/style.css">
@@ -30,6 +46,9 @@
     <br>
     <img id="gallery" src="">
     <br>
+    <p id="desc"></p>
+    <br>
+    <button onclick="prev()">PREVIOUS</button>
     <button onclick="next()">NEXT</button>
     
     
