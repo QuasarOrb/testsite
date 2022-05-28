@@ -5,18 +5,18 @@
     <script>
       let imgs = ["../assets/baiji.jpg", "../assets/sea-cow.jpg", "../assets/golden-toad.jpg"];
       let descs = ["The baiji is a type of dolphin that lives in a river in China.  Maybe it's extinct, maybe not, but right now scientists can't find any.", 
-      "Its skin is an inch thick, and instead of teeth, it has white bristles.  Imagine eating with your mustache.", "A toad made of gold.  Enough said."
-    ];
-    let alts =["Baiji", "Steller's Sea Cow", "Golden Toad"   ];
-      let counter = 0;
+      "Its skin is an inch thick, and instead of teeth, it has white bristles.  Imagine eating with your mustache.", "A toad made of gold.  Enough said."];
+      let alts = ["Baiji", "Steller's Sea Cow", "Golden Toad"   ];
+      let counter = 0;      
       let titles = ["Baiji", "Stellar's Sea Cow", "Golden Toad"];
+      let crs = ["from Alessio Marrucci on commons.wikimedia.org - CC BY-SA 3.0", "Emoke Denes on commons.wikimedia.org - CC BY-SA 2.5 ", "Charles H. Smith on commons.wikimedia.org - Public Domain"];
       let myFunction = () => {
         document.getElementById("gallery").src = imgs[counter];
         document.getElementById("gallery").alt = alts[counter];
         document.getElementById("title").innerText = titles[counter];
         document.getElementById("desc").innerText = descs[counter];
-        
-      }
+        document.getElementById("crs").innerText = crs[counter];
+      };
       
       let next = (step) => {
         if (step + counter < 0) {
@@ -25,26 +25,29 @@
           counter = 0;
         }else {
           counter += step
-        }
+        };
 
       
         document.getElementById("gallery").src = imgs[counter];
         document.getElementById("gallery").alt = alts[counter];
         document.getElementById("title").innerText = titles[counter];
         document.getElementById("desc").innerText = descs[counter];
-      }
+        document.getElementById("crs").innerText = crs[counter];
+      };
       
     
     </script>
     <link rel="stylesheet" href="../style/style.css">
   </head>
   <body onload="myFunction()">  
-
+ <h6> "Slideshow" </h6>
     <a href="../index.html">Home </a>
     <br>
     <h3 id="title"></h3>
     <br>
     <img id="gallery" src="" alt="">
+    <br>
+    <h6 id="crs"></h6>
     <br>
     <p id="desc"></p>
     <br>
@@ -54,28 +57,12 @@
     
     <!-- <ol>
     
-    
-      <li>
-        
-        <p>The baiji is a type of dolphin that lives in a river in China.  Maybe it's extinct, maybe not, but right now scientists can't find any.</p>
-        <img src="../assets/baiji.jpg" alt="Baiji" >
         <p>from Alessio Marrucci on commons.wikimedia.org - CC BY-SA 3.0</p>
-      </li>
-
     
-      <li>
-        <h3>Steller's Sea Cow</h3>
-        <p>Its skin is an inch thick, and instead of teeth, it has white bristles.  Imagine eating with your mustache.</p>
-        <img src="../assets/sea-cow.jpg" alt="Steller's Sea Cow" >
-        <p>Emoke Denes on commons.wikimedia.org - CC BY-SA 2.5 </p></li>
-
-      
-      <li>
-        <h3>Golden Toad</h3>
-        <p>A toad made of gold.  Enough said.</p>
-        <img src="../assets/golden-toad.jpg" alt="Golden Toad" >
+        <p>Emoke Denes on commons.wikimedia.org - CC BY-SA 2.5 </p>
+    
         <p>Charles H. Smith on commons.wikimedia.org - Public Domain</p>
-      </li>
+      
     </ol> -->
 	</body>
 </html> 
