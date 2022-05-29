@@ -2,16 +2,18 @@ h6{
   font-size: 8px;
   color: gray;
   text-align: center;
+
   
-  
-}a {
+}
+
+a {
 font-size: 30px;
 text-align: center;
 }
 
 
 body {
-  background-color: #60cdf1;
+  background-color: red;
 
 text-align: center;
 }
